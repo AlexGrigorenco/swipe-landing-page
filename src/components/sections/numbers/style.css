@@ -1,0 +1,25 @@
+
+
+
+
+
+@media(max-width: 850px) {
+  .numbers-content{
+    flex-direction: column;
+  }
+}
+@media(max-width: 650px) {
+  .numbers .bgImg{
+      max-width: 90%;
+      top: -2%;
+    }
+  
+}
+
+@media(max-width: 400px) {
+  .numbers .cards{
+      flex-direction: column;
+    }
+  
+}
+

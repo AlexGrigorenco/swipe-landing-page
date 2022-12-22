@@ -1,0 +1,40 @@
+
+.features .decor-line {
+  height: 100%;
+  width: 2px;
+  background: rgba(239, 233, 233, 0.5);
+  box-shadow: 0 0 4px rgb(239, 233, 233);
+}
+
+
+@media(max-width: 900px) {
+  .features .cards{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .features .decor-line {
+    width: 100%;
+    height: 2px;
+  }
+  .features .cube{
+    top: 0;
+  }
+  .features .cylinder{
+    top: 30%;
+    right: -10%;
+  }
+  .features .tor{
+    bottom: 0;
+    left: 0;
+  }
+  
+}
+
+
+@media(max-width: 510px) {
+  .features .title{
+    flex-direction: column;
+  }
+  
+}

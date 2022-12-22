@@ -1,0 +1,67 @@
+
+
+
+
+:root{
+  --menu_mobile_length: 40px;
+  --menu_mobile_weight: 5px;
+  --menu_mobile_space_between: 2.2;
+  --menu_mobile_color: white;
+}
+
+.menu-icon-wrapper {
+  cursor: pointer;
+  padding: 5px;
+  width: calc(var(--menu_mobile_length) + 10px);
+  height: calc(var(--menu_mobile_length) + 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: var(--menu_mobile_length);
+  height: var(--menu_mobile_weight);
+  background-color: var(--menu_mobile_color);
+}
+
+.menu-icon::before {
+  position: absolute;
+  left: 0;
+  top: calc((var(--menu_mobile_weight)*var(--menu_mobile_space_between))*-1);
+  content: '';
+  width: var(--menu_mobile_length);
+  height: var(--menu_mobile_weight);
+  background-color: var(--menu_mobile_color);
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+
+}
+
+.menu-icon::after {
+  position: absolute;
+  left: 0;
+  top: calc(var(--menu_mobile_weight)*var(--menu_mobile_space_between));
+  content: '';
+  width: var(--menu_mobile_length);
+  height: var(--menu_mobile_weight);
+  background-color: var(--menu_mobile_color);
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+
+}
+
+.menu-icon.menu-icon-active {
+  background-color: transparent;
+}
+
+.menu-icon.menu-icon-active::before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.menu-icon.menu-icon-active::after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
