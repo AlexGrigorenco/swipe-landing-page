@@ -1,6 +1,6 @@
 
 
-const Title = ({text, maxWidth, anchor}) => {
+const Title = ({text, maxWidth, anchor, size}) => {
 
 
   const styles = {
@@ -12,12 +12,19 @@ const Title = ({text, maxWidth, anchor}) => {
     maxWidth: maxWidth
   }
 
+  console.log(size)
+  console.log(+size)
+  
+  if(size){
+    styles.fontSize = `calc(32px + (${+size} - 32) * ((100vw - 320px) / (1900 - 320)))`
+  }
+
 
 
   return ( 
     
     <>
-    <h2 id={anchor} className="" style={styles}>
+    <h2 id={anchor ? anchor : null} className="relative z-10" style={styles}>
     {text}
     </h2>
     </>

@@ -1,0 +1,25 @@
+
+
+.price .cards-wrapper .basic ul li:nth-child(4),
+.price .cards-wrapper .basic ul li:nth-child(5){
+  color: #ABAABB;
+}
+
+
+@media (max-width: 900px){
+  .price .cards-wrapper{
+    flex-direction: column;
+  }
+}
+@media (max-width: 450px){
+  .price .cards-wrapper .card-price{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .price .cards-wrapper li{
+    font-size: 14px;
+  }
+  .price .cards-wrapper .decor{
+    opacity: .8;
+  }
+}

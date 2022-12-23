@@ -1,0 +1,19 @@
+
+
+@media (max-width: 700px) {
+  .technologies{
+    flex-direction: column;
+  }
+  .technologies .decor{
+    top: 10%;
+    opacity: .8;
+  }
+
+  .reuse-sections{
+    flex-direction: column-reverse;
+  }
+  .reuse-sections .decor{
+    opacity: .8;
+  }
+  
+}

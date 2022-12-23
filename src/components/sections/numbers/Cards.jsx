@@ -1,26 +1,28 @@
 import HorizontalLine from "../HorizontalLine";
 
-const cards = [{
-  index: 1,
-  title: 'Happy clients',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet.',
-  count: '1000+',
-},
-{
-  index: 2,
-  title: 'Products created',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet.',
-  count: '20+',
-},
-{
-  index: 3,
-  title: 'Investments received',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet.',
-  count: '$5M+',
-}]
+
 
 
 const Cards = () => {
+
+  const cards = [{
+    index: 1,
+    title: 'Happy clients',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet.',
+    count: '1000+',
+  },
+  {
+    index: 2,
+    title: 'Products created',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet.',
+    count: '20+',
+  },
+  {
+    index: 3,
+    title: 'Investments received',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla interdum aliquet.',
+    count: '$5M+',
+  }]
 
   
   return ( 
