@@ -13,8 +13,11 @@
     align-items: center;
 
   }
-  .features .decor-line {
+  .features .decor-wrapper {
     width: 100%;
+  }
+  .features .decor-line {
+    width: inherit;
     height: 2px;
   }
   .features .cube{

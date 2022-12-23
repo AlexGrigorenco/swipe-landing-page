@@ -104,7 +104,7 @@ const Cards = () => {
               </div>
 
         </div>
-                  <div> {item.decorLine}</div> 
+                  <div className='decor-wrapper'> {item.decorLine}</div> 
         </>
         
         )}
