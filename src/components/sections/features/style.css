@@ -1,4 +1,3 @@
-
 .features .decor-line {
   height: 100%;
   width: 2px;
@@ -6,12 +5,10 @@
   box-shadow: 0 0 4px rgb(239, 233, 233);
 }
 
-
-@media(max-width: 900px) {
-  .features .cards{
+@media (max-width: 900px) {
+  .features .cards {
     flex-direction: column;
     align-items: center;
-
   }
   .features .decor-wrapper {
     width: 100%;
@@ -20,24 +17,21 @@
     width: inherit;
     height: 2px;
   }
-  .features .cube{
+  .features .cube {
     top: 0;
   }
-  .features .cylinder{
+  .features .cylinder {
     top: 30%;
     right: -10%;
   }
-  .features .tor{
+  .features .tor {
     bottom: 0;
     left: 0;
   }
-  
 }
 
-
-@media(max-width: 510px) {
-  .features .title{
+@media (max-width: 510px) {
+  .features .title {
     flex-direction: column;
   }
-  
 }
