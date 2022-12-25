@@ -13,7 +13,7 @@ const List = () => {
 
 
     <ul className='flex flex-col gap-[10px] '>
-      {list.map(item => <li className='pl-[40px] relative'>
+      {list.map((item, i) => <li key={i} className='pl-[40px] relative'>
         <div className='w-[21px] h-[21px] absolute top-0 left-0'>
           <img src={img} alt="check" className='object-fill' />
         </div>

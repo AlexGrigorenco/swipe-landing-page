@@ -86,7 +86,7 @@ const Cards = () => {
   return ( 
 
     <div className='cards relative flex gap-1 justify-between'>
-        {cards.map((item, i) => <><div className='card relative flex flex-col gap-[26px] p-[14px] max-w-[348px]'  key={item.id}>
+        {cards.map((item, i) => <div key={item.id}><div className='card relative flex flex-col gap-[26px] p-[14px] max-w-[348px]'  >
           <h4 className='text-[34px] leading-[110%]'>{item.title}</h4>
           <p>{item.text}</p>
 
@@ -105,7 +105,7 @@ const Cards = () => {
 
         </div>
                   <div className='decor-wrapper'> {item.decorLine}</div> 
-        </>
+        </div>
         
         )}
 

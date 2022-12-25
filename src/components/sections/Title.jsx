@@ -11,9 +11,6 @@ const Title = ({text, maxWidth, anchor, size}) => {
     fontSize: 'calc(36px + (70 - 36) * ((100vw - 320px) / (1800 - 320)))',
     maxWidth: maxWidth
   }
-
-  console.log(size)
-  console.log(+size)
   
   if(size){
     styles.fontSize = `calc(32px + (${+size} - 32) * ((100vw - 320px) / (1900 - 320)))`

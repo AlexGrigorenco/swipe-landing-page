@@ -1,5 +1,7 @@
 import Button from "../../Button";
 import Title from "../Title";
+import TeamSlider from "./TeamSlider";
+import './style.css'
 
 
 
@@ -22,6 +24,24 @@ const Team = () => {
               <div>
               <Button text='See all openings' bgColor='white' />
               </div>
+        </div>
+      </div>
+
+      <div className="pt-[14vh]">
+          <div className="sliders-wrapper px-[8vw] relative">
+
+             <TeamSlider navigation={{
+        nextEl: '.sliders__bttn--next',
+        prevEl: '.sliders__bttn--prev'
+      }}
+                         controller={2}/>
+             <TeamSlider navigation={{
+        nextEl: '.sliders__bttn--next',
+        prevEl: '.sliders__bttn--prev'
+      }} initialSlide={4} controller={1}/>
+
+             <button className="absolute p-[20px] bg-blue-600 rounded sliders__bttn sliders__bttn--prev top-[46%] left-0"></button>
+             <button className="absolute p-[20px] bg-blue-600 rounded sliders__bttn sliders__bttn--next top-[46%] right-0"></button>
         </div>
       </div>
     </div>
