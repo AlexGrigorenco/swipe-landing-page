@@ -6,6 +6,7 @@ import './style.css'
 import ReuseSections from "./ReuseSections";
 import Price from "./price/Price";
 import Team from "./team/Team";
+import Faq from "./faq/Faq";
 
 
 
@@ -30,6 +31,7 @@ const Sections = () => {
 
     <Price />
     <Team />
+    <Faq />
 
     </div>
 

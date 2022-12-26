@@ -1,7 +1,7 @@
 import Button from "../../Button";
 import Title from "../Title";
 import TeamSlider from "./TeamSlider";
-import './style.css'
+import arrowBttn from './../../../images/team/arrow.svg'
 
 
 
@@ -28,20 +28,17 @@ const Team = () => {
       </div>
 
       <div className="pt-[14vh]">
-          <div className="sliders-wrapper px-[8vw] relative">
+          <div className="team-slider px-[8vw] relative">
 
-             <TeamSlider navigation={{
-        nextEl: '.sliders__bttn--next',
-        prevEl: '.sliders__bttn--prev'
-      }}
-                         controller={2}/>
-             <TeamSlider navigation={{
-        nextEl: '.sliders__bttn--next',
-        prevEl: '.sliders__bttn--prev'
-      }} initialSlide={4} controller={1}/>
+             <TeamSlider />
+             
 
-             <button className="absolute p-[20px] bg-blue-600 rounded sliders__bttn sliders__bttn--prev top-[46%] left-0"></button>
-             <button className="absolute p-[20px] bg-blue-600 rounded sliders__bttn sliders__bttn--next top-[46%] right-0"></button>
+             <button className="absolute hover:scale-110 hover:border px-[15px] py-[10px] shadow-[0px_4px_20px_rgba(193,_193,_193,_0.3)] bg-[#FBFBFF] rounded-[5px] sliders__bttn sliders__bttn--prev top-[42%] left-0">
+              <img src={arrowBttn} alt="prev" />
+             </button>
+             <button className="absolute hover:scale-110 hover:border px-[15px] py-[10px] shadow-[0px_4px_20px_rgba(193,_193,_193,_0.3)] bg-[#FBFBFF] rounded-[5px] sliders__bttn sliders__bttn--next top-[42%] right-0">
+             <img className="rotate-180" src={arrowBttn} alt="next" />
+             </button>
         </div>
       </div>
     </div>

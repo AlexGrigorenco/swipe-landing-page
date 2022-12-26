@@ -1,10 +1,9 @@
 
-import { useState } from 'react'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Controller } from "swiper";
+import { Navigation } from "swiper";
 
 import "swiper/css";
-import './style.css'
 
 import martinFuri from './../../../images/team/martin-furi-img.png'
 import timotiCrash from './../../../images/team/timoti-crash-img.png'
@@ -16,7 +15,7 @@ import alexSosnovsky from './../../../images/team/alex-sosnovsky-img.png'
 import andyGupta from './../../../images/team/andy-gupta-img.png'
 import danWizeNicon from './../../../images/team/dan-wize-nicon-img.png'
 
-const TeamSlider1 = ({navigation, initialSlide, controller}) => {
+const TeamSlider1 = () => {
 
   const slides = [
     {
@@ -72,21 +71,30 @@ const TeamSlider1 = ({navigation, initialSlide, controller}) => {
 
   return (  
 
-    
-    <Swiper className='team-slider mySwiper1 mb-3'
-
+  <div>
+    <Swiper className='mb-4'
       
-      navigation={navigation}
-      modules={[Navigation, Controller]}  
+      navigation={{nextEl: '.sliders__bttn--next',
+                   prevEl: '.sliders__bttn--prev'}}
+      modules={[Navigation]}  
       spaceBetween={20}
-      slidesPerView={4}
       loop={true}
-      initialSlide={initialSlide ? initialSlide : 0}
-      controller={{ control: controller }}
-      
-      
-    >
+      initialSlide={0}
 
+      breakpoints={{
+        300: {
+          slidesPerView: 1,
+        },
+        400: {
+          slidesPerView: 2,
+        },
+        700: {
+          slidesPerView: 3,
+        },
+        1000: {
+          slidesPerView: 4,
+        },
+      }}>
           {slides.map(item => 
             <SwiperSlide key={item.id}>
               <div className="max-w-[230px] p-[5px] flex flex-col items-center gap-[16px]">
@@ -104,10 +112,52 @@ const TeamSlider1 = ({navigation, initialSlide, controller}) => {
 
             </SwiperSlide>
           )}
-
-
     </Swiper>
+
+    <Swiper className=''
+      
+        navigation={{nextEl: '.sliders__bttn--next',
+                    prevEl: '.sliders__bttn--prev'}}
+        modules={[Navigation]}  
+        spaceBetween={20}
+        slidesPerView={4}
+        loop={true}
+        initialSlide={4}
+
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+          },
+          400: {
+            slidesPerView: 2,
+          },
+          700: {
+            slidesPerView: 3,
+          },
+          1000: {
+            slidesPerView: 4,
+          },
+        }}>
+          {slides.map(item => 
+      <SwiperSlide key={item.id}>
+        <div className="max-w-[230px] p-[5px] flex flex-col items-center gap-[16px]">
+          <div className="rounded-[50%] overflow-hidden">
+            <img src={item.img} alt="icon" />
+          </div>
+
+          <p className="text-[20px]">{item.name}</p>
+
+          <div className="text-[18px] text-[#2D2B5C] text-center">
+            {item.jobTitle}
+          </div>
+          
+        </div>
+
+      </SwiperSlide>
+           )}
     
+    </Swiper>
+</div>
   );
 }
  
