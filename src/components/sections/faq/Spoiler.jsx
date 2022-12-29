@@ -14,7 +14,7 @@ const Spoiler = ({title, body}) => {
     <div className='' style={{borderBottom: '2px solid #E7E5FF'}}>
       <div className="spoile-title cursor-pointer pl-[2vw] flex items-center gap-[4vw]" onClick={() => setSpoileActive(prev => !prev)}>
 
-            <div className={spoileActive ? 'arrow-icon w-[68px] h-[46px] flex-shrink-0 rotate-180' : 'arrow-icon w-[68px] h-[46px] flex-shrink-0'}>
+            <div style={{transition: '0.2s linear'}} className={spoileActive ? 'arrow-icon w-[68px] h-[46px] flex-shrink-0 rotate-180' : 'arrow-icon w-[68px] h-[68px] flex-shrink-0'}>
                <img  style={{objectFit: 'fill'}} src={img} alt="icon" />
             </div>
 
